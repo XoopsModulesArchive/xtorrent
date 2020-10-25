@@ -1,0 +1,62 @@
+Bug fix list history:
+
+4th - 11th July 2004 Version 2.0.4
+Fixed catgeory ordering in to show by title and not ID in admin main index category selection box.
+Removed duplicate Lang defines in module/wf-download/index.php
+Removed alt text defines on Legend images.
+Removed <p></p> tags from xtorrent_index.html as it caused alignment problems in template.
+Fixed Bugs when user submits a broken file report.
+Fixed grouppermission bug when displaying sub categories in viewcat.php
+Fixed category count bug in main index listings.
+Fixed Bug where Xoops Sort bar would show even if no files where available.
+Fixed Bug where sub-categories would be displayed when viewing downloads by alphabetical listing.
+Fixed Bug where sub-categories listing would show incorrectly when listed.
+Fixed Bug in wf-downloads block that would show incorrect path.
+Fixed Permissions form in admin for both Category and files.
+Fixed Bug where permission where not set of topten items
+Fixed Bug where category heading displayed the wrong category description for each category in viewcat.php.
+Fixed Bug categories are now ordered by their weight and not title.
+Fixed Bug PHP related issue, not all servers have PHP math functions enabled so we did a little workaround on this.
+Fixed Bug displaying logo in singlefile page.
+Fixed Bug where other files by would show incorrect and also show offline files.
+Fixed Bug: Any user could use the update script. A big NO NO! This has been restricted to admin users only.
+Fixed Bug: New submission to webmaster displayed the wrong link (Taken to the wrong link when clicking to view new
+submission.
+Fixed Bug: Duplicate code for image list array in image uploader.php.
+Fixed Bug: Group Permissions where not included within WF-Downloads search function.  
+	Every file was shown whether a user had permission to see them or not.
+Fixed Bug: Change language Page Published/Expire Date to File Published/Expire date.
+Fixed Bug: Block Language define change _MB_MYDOWNLOADS_LENGTH to _MB_XTORRENT_LENGTH
+Fixed Bug: Filenames with spaces where broken, this has been corrected.
+Fixed Bug: Fixed allowed File URL Input size to 255 chars when entering File URL in admin. 
+Fixed Bug: Fixed allowed File URL mirror input size to 255 chars when entering File mirror in admin. 	
+Fixed Bug: Fixed allowed File URL title input size to 255 chars when entering File title in admin.
+Fixed Bug: Server Uploads Status displayed incorrect php_ini setting. Should have been file_uploads and not enable_dl.
+ 
+Added: Alphabetical listing to top ten items.
+Added: The ability to create News Story from submitted download (admin only).
+Added: Recording user uploader IP address for security reasons.
+Added: Url/File check at download stage for broken files.  Will redirect user to state file is broken and not a 
+404 The page cannot be found. Not fully tested yet but seems to be working. 
+Temporary Removed Spotlight items from category form. Will add in a future version.
+Changed Category listing templates for more ordered look.
+
+12/07/2004 v2.0.4
+
+Fixed Bug: Fatal error: Call to undefined function: gd_info() when GD library not installed on server (MadFish).  
+Fixed: Group Permission setting. Invalid default for file submission in xoops_version.php. (FrankBlack)
+Add: Added a check to update files, cannot access them directly now and can only be executed from the update script.
+Fixed bug: File spaces where not converted when uploading to server.
+Fixed bug: Fixed invalid path for forum link.
+Fixed bug: Review was not approved when editing and then clicking approve.
+Added broken information to broken files report.
+Fixed bug: Fixed icon bug in broken download reports.
+Many other small bug fixes or changes to the module
+
+26/07/04 2.0.5
+Fixed New/update icon bug.
+Fixed $mtys must be $myts typo on reviews.
+Fixed upload issue both in admin and user submission.
+Fixed two missing language defines.
+Added file exists check on upload
+Changed version number to 2.0.5a to save confussion. 

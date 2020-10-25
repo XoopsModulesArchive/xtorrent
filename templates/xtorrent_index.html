@@ -1,0 +1,52 @@
+<{if $catarray.imageheader != ""}>
+	<br><div align="center"><{$catarray.imageheader}></div><br>
+<{/if}>
+
+<{if $catarray.indexheading != ""}>
+	<div><h4><{$catarray.indexheading}></h4></div>
+<{/if}>
+
+<div align="<{$catarray.indexheaderalign}>"><{$catarray.indexheader}></div><br>
+<div align="center" class="itemPermaLink"><{$catarray.letters}></div><br>
+<div align="center"><{$catarray.toolbar}></div><br>
+
+<{if count($categories) gt 0}> 
+	<div class="even"><b><{$smarty.const._MD_XTORRENT_MAINLISTING}></b></div><br>
+	<table border="0" cellspacing="5" cellpadding="0" align="center">
+		<tr>
+			<!-- Start category loop -->
+			<{foreach item=category from=$categories}>
+			<td width="5%" align="center" valign="top">
+					<a href="<{$xoops_url}>/modules/xtorrent/viewcat.php?cid=<{$category.id}>"><img src="<{$category.image}>" alt="<{$category.alttext}>" align="middle"></a>
+    		</td>
+    		<td valign="middle" width="35%">
+						<a href="<{$xoops_url}>/modules/xtorrent/viewcat.php?cid=<{$category.id}>"><b><{$category.title}></b></a>&nbsp;(<{$category.totaldownloads}>)<br>
+				        <div style="margin-bottom: 3px; margin-left: 10px;"><{$category.summary}></div>				
+						<{if $category.subcategories}>
+							<div style="margin-bottom: 3px; margin-left: 16px;"><small><{$category.subcategories}></small></div>
+    					<{/if}>
+			</td>
+    		<{if $category.count is div by 2}>
+	  </tr><tr>
+    		<{/if}>
+		<{/foreach}>
+  	<!-- End category loop -->
+</tr>
+</table>
+<br>
+<div class="odd" style="line-height: 8px;"><small><{$lang_thereare}></small></div><br>
+<div align="right" style="margin-bottom: 1px;"><small>
+<img src="<{$xoops_url}>/modules/xtorrent/images/icon/download1.gif" alt=""  
+align="middle">&nbsp;<{$smarty.const._MD_XTORRENT_LEGENDTEXTNEW}>
+<img src="<{$xoops_url}>/modules/xtorrent/images/icon/download2.gif" alt="" 
+align="middle">&nbsp;<{$smarty.const._MD_XTORRENT_LEGENDTEXTNEWTHREE}>
+<img src="<{$xoops_url}>/modules/xtorrent/images/icon/download3.gif" alt="" 
+align="middle">&nbsp;<{$smarty.const._MD_XTORRENT_LEGENDTEXTTHISWEEK}>
+<img src="<{$xoops_url}>/modules/xtorrent/images/icon/download4.gif" alt="" 
+align="middle">&nbsp;<{$smarty.const._MD_XTORRENT_LEGENDTEXTNEWLAST}>
+</small></div>
+<{/if}> 
+<br>
+<div align="<{$catarray.indexfooteralign}>"><{$catarray.indexfooter}></div>
+<br>
+<{include file="db:system_notification_select.html"}>
